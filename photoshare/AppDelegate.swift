@@ -9,13 +9,15 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, OstetsoDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Ostetso.setApplicationID("0C04F2AE-4908-43AE-AB67-677F92014A88", appKey: "9B1FB7CE-C44A-A105-DB10-F4E30F5C6C69", useProductionEnvironment: false, delegate: self)
         return true
     }
 
