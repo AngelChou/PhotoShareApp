@@ -12,6 +12,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     var picker:UIImagePickerController!
     
+    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.delegate = self
     }
     
+    @IBAction func shareButtonClicked(_ sender: Any) {
+        Ostetso.share(imageView.image)
+    }
+
     @IBAction func chooseButtonClicked(_ sender: Any) {
         present(self.picker, animated: true, completion: nil)
     }
@@ -29,6 +34,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = pickedImage
+            shareButton.isEnabled = true
         }
         dismiss(animated: true, completion: nil)
     }
