@@ -31,6 +31,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(self.picker, animated: true, completion: nil)
     }
     
+    @IBAction func galleryButtonClicked(_ sender: Any) {
+        Ostetso.showGallery()
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = pickedImage

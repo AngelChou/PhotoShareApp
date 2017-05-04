@@ -26,9 +26,9 @@
                                 <rect key="frame" x="0.0" y="166" width="375" height="501"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrC-Kx-bpY">
-                                <rect key="frame" x="0.0" y="97" width="183" height="30"/>
+                                <rect key="frame" x="0.0" y="97" width="150" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="183" id="knF-TG-OMo"/>
+                                    <constraint firstAttribute="width" constant="150" id="knF-TG-OMo"/>
                                 </constraints>
                                 <state key="normal" title="Choose Image..."/>
                                 <connections>
@@ -45,6 +45,16 @@
                                     <action selector="shareButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ve1-Nd-2Ml"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxd-fv-jgF">
+                                <rect key="frame" x="164" y="97" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Xt5-gI-MzA"/>
+                                </constraints>
+                                <state key="normal" title="Gallery"/>
+                                <connections>
+                                    <action selector="galleryButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugy-R0-y0K"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -53,9 +63,11 @@
                             <constraint firstAttribute="trailing" secondItem="3rl-Kv-gnY" secondAttribute="trailing" id="Epn-YZ-ivA"/>
                             <constraint firstItem="OrC-Kx-bpY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="KYM-kk-bvA"/>
                             <constraint firstItem="3rl-Kv-gnY" firstAttribute="top" secondItem="ycQ-nO-K3P" secondAttribute="bottom" constant="39" id="OSv-Jq-1Q7"/>
+                            <constraint firstItem="3rl-Kv-gnY" firstAttribute="top" secondItem="Vxd-fv-jgF" secondAttribute="bottom" constant="39" id="QdS-pA-FSl"/>
                             <constraint firstItem="3rl-Kv-gnY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X47-WS-iNJ"/>
                             <constraint firstItem="3rl-Kv-gnY" firstAttribute="top" secondItem="OrC-Kx-bpY" secondAttribute="bottom" constant="39" id="n0m-kA-kfX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ycQ-nO-K3P" secondAttribute="trailing" id="pjy-er-GHX"/>
+                            <constraint firstItem="Vxd-fv-jgF" firstAttribute="leading" secondItem="OrC-Kx-bpY" secondAttribute="trailing" constant="14" id="uKh-iS-WnJ"/>
                         </constraints>
                     </view>
                     <connections>
